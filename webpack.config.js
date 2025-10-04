@@ -12,7 +12,7 @@ module.exports = {
     mode: 'development',
     devServer: {
       static: './dist', 
-      port: 3000,       
+      port: 9000,       
       open: true,       
       hot: true,        
       watchFiles: ['src/**/*'], 
