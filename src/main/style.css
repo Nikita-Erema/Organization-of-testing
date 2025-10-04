@@ -1,0 +1,15 @@
+.card_case {
+    display: flex;
+    gap: 10px;
+}
+.card {
+    width: 48px;
+    height: 48px;
+    opacity: 0.3;
+}
+.card_active {
+    opacity: 1;
+}
+.button_validate {
+    background-color: #63b463;
+}
