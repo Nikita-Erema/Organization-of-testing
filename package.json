@@ -9,9 +9,10 @@
     "build": "webpack --mode production",
     "lint": "eslint",
     "start": "webpack serve --mode development --open",
-    "test": "jest --coverage",
-    "test:e2e": "jest -c src/e2e/jest.config.js --coverage"
-  },
+    "serve": "webpack serve --mode development --port 9000",
+    "test:e2e": "start-server-and-test serve http://localhost:9000 \"jest -c src/e2e/jest.config.js --testTimeout=30000\"",
+    "test:unit": "jest --coverage"
+    },
   "devDependencies": {
     "@babel/core": "^7.28.4",
     "@babel/preset-env": "^7.28.3",
