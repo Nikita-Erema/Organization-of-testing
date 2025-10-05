@@ -1,24 +1,21 @@
 export function lun(number) {
-    if (number) {
-        let multiplication = [];
-        let elseArray = [];
-        let array = clearCardNumber(number)
-        for (let i = array.length - 1; i >= 0; i--) {
-            if ((array.length - 1 - i) % 2 === 0) {
-                multiplication.push(array[i]);
-            } else {
-                elseArray.push(array[i]);
-            }
+    if (!number) return false;
+    const array = clearCardNumber(number);
+    let sum = 0;
+    let shouldDouble = false;
+    for (let i = array.length - 1; i >= 0; i--) {
+        let digit = parseInt(array[i]);
+        
+        if (shouldDouble) {
+            digit *= 2;
+            if (digit > 9) digit -= 9;
         }
-        multiplication = multiplication.map((element) => Number(element) * 2);  
-        multiplication = multiplication.map((element) => element > 9 ? element - 9 : element)
-        let sum = multiplication.reduce((acc, element) => acc + element, 0) + elseArray.reduce((acc, element) => acc + Number(element), 0);
-        if (sum % 10 == 0) {
-            return true
-        } else {
-            return false
-        }
+        
+        sum += digit;
+        shouldDouble = !shouldDouble; 
     }
+    
+    return sum % 10 === 0;
 }
 console.log(lun('371449635398431'))
 export function clearCardNumber(number) {

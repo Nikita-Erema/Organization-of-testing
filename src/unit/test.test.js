@@ -1,8 +1,10 @@
 const { lun} = require("../main/algoritmLuna");
 const { cardNumber } = require("../main/checkCardNumber");
 test('test algoritm Luna', () => {
-    const check = lun('5062 8212 3456 7892');
-    expect(check).toBe(true);
+    const check1 = lun('4111111111111111');
+    const check2 = lun('5555555555554444'); 
+    expect(check1).toBe(true);
+    expect(check2).toBe(true);
 })
 
 test('test function cardNumber mastercard', () => {
