@@ -11,7 +11,7 @@
     "serve": "webpack serve --mode development --open",
     "start": "webpack serve --mode development --port 9000",
     "test:e2e": "jest src/e2e/e2e.test.js --globalSetup ./src/e2e/setup.js --globalTeardown ./src/e2e/setup.js",
-    "test:unit": "jest --coverage"
+    "test:unit": "jest --coverage --testPathIgnorePatterns=e2e"
   },
   "devDependencies": {
     "@babel/core": "^7.28.4",
