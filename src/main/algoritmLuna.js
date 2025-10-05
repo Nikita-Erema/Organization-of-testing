@@ -3,11 +3,11 @@ export function lun(number) {
         let multiplication = [];
         let elseArray = [];
         let array = clearCardNumber(number)
-        for(let i = array.length;i <= 0;i--) {
-            if (i % 2 == 0) {
-                multiplication.push(array[i])
+        for (let i = array.length - 1; i >= 0; i--) {
+            if ((array.length - 1 - i) % 2 === 0) {
+                multiplication.push(array[i]);
             } else {
-                elseArray.push(array[i])
+                elseArray.push(array[i]);
             }
         }
         multiplication = multiplication.map((element) => Number(element) * 2);  

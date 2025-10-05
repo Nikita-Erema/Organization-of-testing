@@ -1,4 +1,4 @@
-import { lun, clearCardNumber } from "./algoritmLuna"
+import { lun} from "./algoritmLuna"
 import { cardNumber } from "./checkCardNumber"
 let inputCard = document.getElementById('user-card')
 let form = document.forms[0]

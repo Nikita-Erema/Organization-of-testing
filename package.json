@@ -5,6 +5,7 @@
   "repository": "https://github.com/Nikita-Erema/Organization-of-testing.git",
   "author": "Archick <k0bana@mail.ru>",
   "license": "MIT",
+  "type": "module",
   "scripts": {
     "build": "webpack --mode production",
     "lint": "eslint",
