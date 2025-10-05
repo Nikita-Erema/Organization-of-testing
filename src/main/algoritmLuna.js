@@ -3,7 +3,7 @@ export function lun(number) {
         let multiplication = [];
         let elseArray = [];
         let array = clearCardNumber(number)
-        for(let i = 0;i < array.length;i++) {
+        for(let i = array.length;i <= 0;i--) {
             if (i % 2 == 0) {
                 multiplication.push(array[i])
             } else {
@@ -20,6 +20,7 @@ export function lun(number) {
         }
     }
 }
+console.log(lun('371449635398431'))
 export function clearCardNumber(number) {
     let array = number.split('');
     array = array.filter((element) => element !== ' ' )
