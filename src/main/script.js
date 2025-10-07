@@ -3,7 +3,7 @@ import { cardNumber } from "./checkCardNumber"
 let inputCard = document.getElementById('user-card')
 let form = document.forms[0]
 let p = document.createElement('p')
-document.body.appendChild(p)
+document.body.append(p)
 form.addEventListener('submit', (e) => {
     e.preventDefault()
     if (document.querySelector('.card_active')) {

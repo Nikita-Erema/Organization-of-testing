@@ -1,7 +1,7 @@
-import js from '@eslint/js';
-import globals from 'globals';
+const js = require('@eslint/js');
+const globals = require('globals');
 
-export default [
+module.exports = [
   {
     // Для всех JS файлов
     files: ['**/*.js'],
@@ -25,7 +25,7 @@ export default [
     files: ['**/*.test.js', '**/e2e/**/*.js'],
     languageOptions: {
       globals: {
-        ...globals.jest, // Добавляет describe, test, expect, etc.
+        ...globals.jest,
       },
     },
   },

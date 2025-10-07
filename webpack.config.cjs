@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = { 
     entry: './src/app.js',
@@ -16,11 +17,23 @@ module.exports = {
       hot: true,        
       watchFiles: ['src/**/*'], 
     },
-    plugins: [new HtmlWebpackPlugin({
-      template: './src/main/index.html', 
-      filename: 'index.html',
-      inject: true
-    })],
+    plugins: [
+      new HtmlWebpackPlugin({
+        template: './src/main/index.html', 
+        filename: 'index.html',
+        inject: true
+      }),
+      new CopyWebpackPlugin({
+        patterns: [
+          {
+            from: 'licenses.txt',
+            to: 'LICENSE',
+            noErrorOnMissing: true 
+          }
+        ]
+      })
+  
+    ],
     module: {
     rules: [
       {
